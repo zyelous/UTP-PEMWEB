@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zahra's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #4a2f2f;
+    }
+    .fancy {
+      font-family: 'Dancing Script', cursive;
+      font-size: 110px;
+      font-weight: bold;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+    .badge {
+      background-color: #87375a;
+      color: white;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 9999px;
+    }
+    .sidebar {
+      transition: transform 0.3s ease;
+    }
+    .sidebar-hidden {
+      transform: translateX(-100%);
+    }
+  </style>
+</head>
+<body class="text-pink-900 text-lg bg-gradient-to-br from-pink-100 via-pink-200 to-pink-50">
+
+<div id="sidebar" class="sidebar sidebar-hidden fixed top-0 left-0 w-64 h-full bg-pink-100 shadow-lg z-50 p-6">
+  <button onclick="toggleSidebar()" class="text-right w-full mb-6 text-2xl text-pink-800"><i class="fas fa-times"></i></button>
+  <nav class="flex flex-col space-y-4">
+    <a href="home.html" class="text-lg hover:underline">Home</a>
+    <a href="about me.html" class="text-lg hover:underline">About Me</a>
+    <a href="skills and tools.html" class="text-lg hover:underline">Skills and Tools</a>
+    <a href="my projects.html" class="text-lg hover:underline">My Projects</a>
+    <a href="my documentation.html" class="text-lg hover:underline">Documentation</a>
+  </nav>
+</div>
+
+<button onclick="toggleSidebar()" class="fixed top-6 left-6 z-50 text-3xl text-pink-800"><i class="fas fa-bars"></i></button>
+
+<section class="max-w-5xl mx-auto p-6 mt-20 bg-white bg-opacity-80 rounded-xl shadow-xl mb-10">
+  <h2 class="fancy text-5xl text-center text-pink-800 mb-10">Skills and Tools</h2>
+  <div class="grid md:grid-cols-2 gap-8">
+
+<!-- Grid besar untuk skills & tools -->
+<div class="grid md:grid-cols gap-8">
+  <!-- Hard & Soft Skills -->
+  <div class="border-4 border-pink-300 p-6 rounded-xl bg-white bg-opacity-70 shadow-md">
+    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-4">Hard Skills</h3>
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+      <span class="badge">analytical thinking</span>
+      <span class="badge">critical thinking</span>
+      <span class="badge">attention to detail</span>
+      <span class="badge">systematic thinking</span>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-4">Soft Skills</h3>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="badge">time management</span>
+      <span class="badge">team work</span>
+      <span class="badge">adaptability</span>
+      <span class="badge">communication</span>
+    </div>
+  </div>
+
+  <!-- Software Tools -->
+  <div class="border-4 border-pink-300 p-6 rounded-xl bg-white bg-opacity-70 shadow-md">
+    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-6">Software Tools</h3>
+    <div class="flex flex-wrap justify-center gap-10">
+      <!-- Ps -->
+      <div class="relative w-24 h-24">
+        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
+        <span class="absolute inset-0 flex items-center justify-center font-bold text-blue-100 text-2xl">Ps</span>
+      </div>
+      <!-- Ai -->
+      <div class="relative w-24 h-24">
+        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
+        <span class="absolute inset-0 flex items-center justify-center font-bold text-yellow-300 text-2xl">Ai</span>
+      </div>
+      <!-- Id -->
+      <div class="relative w-24 h-24">
+        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
+        <span class="absolute inset-0 flex items-center justify-center font-bold text-rose-300 text-2xl">Id</span>
+      </div>
+      <!-- Lr -->
+      <div class="relative w-24 h-24">
+        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
+        <span class="absolute inset-0 flex items-center justify-center font-bold text-blue-300 text-2xl">Lr</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+            <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('sidebar-hidden');
+    }
+  </script>
+
+  </section>
+  
+  </body>
+  </html>
