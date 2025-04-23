@@ -31,6 +31,20 @@
     .sidebar-hidden {
       transform: translateX(-100%);
     }
+
+    @keyframes sway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1deg) translateY(2px);
+  }
+}
+
+.wiggle {
+  animation: sway 3s ease-in-out infinite;
+}
+
   </style>
 </head>
 <body class="text-pink-900 text-lg bg-gradient-to-br from-pink-100 via-pink-200 to-pink-50">
@@ -38,25 +52,18 @@
 <div id="sidebar" class="sidebar sidebar-hidden fixed top-0 left-0 w-64 h-full bg-pink-100 shadow-lg z-50 p-6">
   <button onclick="toggleSidebar()" class="text-right w-full mb-6 text-2xl text-pink-800"><i class="fas fa-times"></i></button>
   <nav class="flex flex-col space-y-4">
-    <a href="home" class="text-lg hover:underline">Home</a>
+    <a href="index.html" class="text-lg hover:underline">Home</a>
     <a href="about me.html" class="text-lg hover:underline">About Me</a>
-    <a href="#projects" class="text-lg hover:underline">My Projects</a>
-    <a href="#docs" class="text-lg hover:underline">Documentation</a>
+     <a href="skills and tools.html" class="text-lg hover:underline">Skills and Tools</a>
+    <a href="my projects.html" class="text-lg hover:underline">My Projects</a>
+    <a href="my documentation.html" class="text-lg hover:underline">Documentation</a>
   </nav>
 </div>
 
 <button onclick="toggleSidebar()" class="fixed top-6 left-6 z-50 text-3xl text-pink-800"><i class="fas fa-bars"></i></button>
 
 <section class="max-w-5xl mx-auto p-6 mt-20 bg-white bg-opacity-80 rounded-xl shadow-xl mb-10">
-  <!-- HALAMAN DEPAN -->
-  <section class="h-screen flex flex-col justify-center items-center text-center relative overflow-hidden" id="about">
-    <img src="orchid-removebg-preview.png" alt="orchid" class="w-28 h-28 absolute top-6 left-6 opacity-90">
-    <h1 class="fancy text-pink- drop-shadow-[0_4px_6px_rgba(0,0,0,0.3)] tracking-wider">Portfolio</h1>
-    <p class="uppercase tracking-wider text-pink-700 mt-4 text-xl">STudent college</p>
-    <img src="orchid-removebg-preview.png" alt="orchid" class="w-28 h-28 absolute bottom-6 right-6 opacity-90">
-  </section>
-
-  <!-- ABOUT ME -->
+ 
   <div class="grid md:grid-cols-2 gap-8 items-center">
     <div>
       <h1 class="fancy text-5xl text-pink- mb-6">Hi, I’m Zahra Citra Apriliana</h1>
@@ -73,155 +80,33 @@
     </div>
   </div>
 
-  <!-- MEDIA SOSIAL -->
   <div class="grid md:grid-cols-2 gap-8 mb-8">
     <div>
       <h2 class="text-xl font-semibold mb-2">Find me on</h2>
+      <nav>
       <ul class="space-y-2">
-        <li><i class="fab fa-instagram text-pink-700"></i> <a href="#" class="underline">instagram.com/zyee.u</a></li>
-        <li><i class="fab fa-tiktok text-pink-700"></i> <a href="#" class="underline">tiktok.com/zyeewu</a></li>
-        <li><i class="fab fa-github text-pink-700"></i> <a href="#" class="underline">github.com/in/zyelous</a></li>
-        <li><i class="fab fa-linkedin text-pink-700"></i> <a href="#" class="underline">linkedin.com/in/zahracitraapriliana</a></li>
+        <li><i class="fab fa-instagram text-pink-700"></i> <a href="https://instagram.com/zyee.u/" class="underline">instagram.com/zyee.u</a></li>
+        <li><i class="fab fa-tiktok text-pink-700"></i> <a href="https://tiktok.com/@zyeewu" class="underline">tiktok.com/zyeewu</a></li>
+        <li><i class="fab fa-github text-pink-700"></i> <a href="https://github.com/in/zyelous" class="underline">github.com/in/zyelous</a></li>
+        <li><i class="fab fa-linkedin text-pink-700"></i> <a href="https://linkedin.com/in/zahracitraapriliana" class="underline">linkedin.com/in/zahracitraapriliana</a></li>
       </ul>
+    </nav>
     </div>  
-    <div>
-      <h2 class="text-xl font-semibold mb-2">Personal Skills</h2>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="badge">Teamwork</span>
-        <span class="badge">Time Management</span>
-        <span class="badge">Critical Thinking</span>
-        <span class="badge">Adaptability</span>
-        <span class="badge">Attention to Detail</span>
-      </div>
-    </div>
   </div>
 
+<div class="relative rounded-xl">
+  <img src="tulips.png" alt="Tulip"
+  class="absolute -bottom-6 -right-7 w-74 z-0">
+</div>
 
-<!-- JS UNTUK TOGGLE SIDEBAR -->
+</section>
+
 <script>
   function toggleSidebar() {
     const sidebar = document.getElementById('sidebar');
     sidebar.classList.toggle('sidebar-hidden');
   }
 </script>
-
-<!-- MY PROJECTS -->
-  <h2 class="fancy text-5xl text-center text-pink-800 mb-10">My Projects</h2>
-  <div class="grid md:grid-cols-2 gap-8">
-
-    <!-- Project 1 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <a href="https://www.figma.com/design/CR9e89XZWIJQ2fUtUZ54rb/PerabotiQ?node-id=0-1&p=f" target="_blank">
-        <img src="figma.png" alt="Prabotiq Demo" class="w-full h-56 object-cover">
-      </a>
-      <div class="p-4">
-        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Prabotiq – E-commerce Furniture</h3>
-        <p class="text-pink-900 mb-3">A stylish furniture web store with product catalog, admin panel, and cart system. Built using modern web technologies.</p>
-        <a href="https://www.figma.com/design/CR9e89XZWIJQ2fUtUZ54rb/PerabotiQ?node-id=0-1&p=f" target="_blank" class="text-pink-600 font-medium underline">
-          <i class="fab fa-figma"></i> See on Figma
-        </a>
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <a href="https://youtu.be/4GkKw5Rb1t4" target="_blank">
-        <img src="iot.png" alt="IoT Project" class="w-full h-56 object-cover">
-      </a>
-      <div class="p-4">
-        <h3 class="text-2xl font-semibold text-pink-700 mb-2">IoT: Smart Medicine Storage</h3>
-        <p class="text-pink-900 mb-3">ESP32-based monitoring system for temperature & humidity in medicine storage. Uses DHT sensor, OLED, Blynk, and alerts.</p>
-        <a href="https://youtu.be/4GkKw5Rb1t4" target="_blank" class="text-pink-600 font-medium underline">
-          <i class="fab fa-youtube"></i> Watch on YouTube
-        </a>
-      </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <a href="https://github.com/zyelous/UAS-PBO.git" target="_blank">
-        <img src="tetris.jpg" alt="Mini Game Project" class="w-full h-56 object-cover">
-      </a>
-      <div class="p-4">
-        <h3 class="text-2xl font-semibold text-pink-700 mb-2">Tetris Game</h3>
-        <p class="text-pink-900 mb-3">A fun remake of the classic Tetris using Unity. Blocks drop, you stack, and the game speeds up as you go! Clean design, smooth feel, and fully playable.</p>
-        <a href="https://github.com/zyelous/UAS-PBO.git" target="_blank" class="text-pink-600 font-medium underline">
-          <i class="fab fa-github"></i> See on Github
-        </a>
-      </div>
-    </div>
-    
-  <!-- Project 4 -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <a href="https://youtu.be/TnUMDANojLo" target="_blank">
-    <img src="https://img.youtube.com/vi/TnUMDANojLo/maxresdefault.jpg" alt="LAN Cable Installation Project" class="w-full h-56 object-cover">
-  </a>
-  <div class="p-4">
-    <h3 class="text-2xl font-semibold text-pink-700 mb-2">LAN Cable Installation</h3>
-    <p class="text-pink-900 mb-3">A hands-on project demonstrating how to properly set up a wired network using LAN cables. Covers cable crimping, connecting to switch/router, and basic network configuration for stable communication.</p>
-    <a href="https://youtu.be/TnUMDANojLo" target="_blank" class="text-pink-600 font-medium underline">
-      <i class="fab fa-youtube"></i> Watch on YouTube
-    </a>
-  </div>
-</div>
-
-<!-- Project 5 -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <a href="https://github.com/zyelous/SUIT-KEL-4.git" target="_blank">
-    <img src="suit.jpg" alt="Suit Game Project" class="w-full h-56 object-cover">
-  </a>
-  <div class="p-4">
-    <h3 class="text-2xl font-semibold text-pink-700 mb-2">Suit Game (Rock-Paper-Scissors)</h3>
-    <p class="text-pink-900 mb-3">A fun interactive Rock-Paper-Scissors game built with an intuitive UI. Features simple animations, player vs computer mode, and responsive layout. Designed for casual gameplay and beginner-friendly interaction.</p>
-    <a href="https://github.com/zyelous/SUIT-KEL-4.git" target="_blank" class="text-pink-600 font-medium underline">
-      <i class="fab fa-github"></i> See on GitHub
-    </a>
-  </div>
-</div>
-
-<!-- Project 6 -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <a href="https://youtu.be/W87TKsEdiYY" target="_blank">
-    <img src="https://img.youtube.com/vi/W87TKsEdiYY/hqdefault.jpg" alt="Proteus to LabVIEW" class="w-full h-56 object-cover">
-  </a>
-  <div class="p-4">
-    <h3 class="text-2xl font-semibold text-pink-700 mb-2">Proteus x LabVIEW Integration</h3>
-    <p class="text-pink-900 mb-3">A practical project demonstrating real-time data transmission between Proteus and LabVIEW. Showcases how virtual sensors in Proteus can communicate with LabVIEW’s GUI for monitoring and control purposes.</p>
-    <a href="https://youtu.be/W87TKsEdiYY" target="_blank" class="text-pink-600 font-medium underline">
-      <i class="fab fa-youtube"></i> Watch on YouTube
-    </a>
-  </div>
-</div>
-
-<!-- Project 7 -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <a href="https://youtu.be/scCpuWmOO4I" target="_blank">
-    <img src="iot parkir.png" alt="Parking Monitoring System" class="w-full h-56 object-cover">
-  </a>
-  <div class="p-4">
-    <h3 class="text-2xl font-semibold text-pink-700 mb-2">Smart Parking Monitoring System</h3>
-    <p class="text-pink-900 mb-3">A simulated IoT-based parking system using ESP32, ultrasonic sensors, buzzer, LED indicators, and OLED. Helps visualize parking slot availability in real-time for better traffic flow and space usage.</p>
-    <a href="https://youtu.be/scCpuWmOO4I" target="_blank" class="text-pink-600 font-medium underline">
-      <i class="fab fa-youtube"></i> Watch on YouTube
-    </a>
-  </div>
-</div>
-
-<!-- Project 8 -->
-<div class="bg-white rounded-lg shadow-md overflow-hidden">
-  <a href="https://youtu.be/L-eoAmPYm6Y" target="_blank">
-    <img src="https://img.youtube.com/vi/L-eoAmPYm6Y/hqdefault.jpg" alt="Ball Animation Project" class="w-full h-56 object-cover">
-  </a>
-  <div class="p-4">
-    <h3 class="text-2xl font-semibold text-pink-700 mb-2">Ball Animation – JavaFX + Scene Builder</h3>
-    <p class="text-pink-900 mb-3">An animation project where a ball moves across the screen using JavaFX. The UI is designed with Scene Builder, combining visual design with smooth Java-based motion control.</p>
-    <a href="https://youtu.be/L-eoAmPYm6Y" target="_blank" class="text-pink-600 font-medium underline">
-      <i class="fab fa-youtube"></i> Watch on YouTube
-    </a>
-  </div>
-</div>
-  </div>
-
 </section>
 
 </body>
