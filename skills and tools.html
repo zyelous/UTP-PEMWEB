@@ -38,7 +38,7 @@
 <div id="sidebar" class="sidebar sidebar-hidden fixed top-0 left-0 w-64 h-full bg-pink-100 shadow-lg z-50 p-6">
   <button onclick="toggleSidebar()" class="text-right w-full mb-6 text-2xl text-pink-800"><i class="fas fa-times"></i></button>
   <nav class="flex flex-col space-y-4">
-    <a href="home.html" class="text-lg hover:underline">Home</a>
+    <a href="index.html" class="text-lg hover:underline">Home</a>
     <a href="about me.html" class="text-lg hover:underline">About Me</a>
     <a href="skills and tools.html" class="text-lg hover:underline">Skills and Tools</a>
     <a href="my projects.html" class="text-lg hover:underline">My Projects</a>
@@ -49,56 +49,41 @@
 <button onclick="toggleSidebar()" class="fixed top-6 left-6 z-50 text-3xl text-pink-800"><i class="fas fa-bars"></i></button>
 
 <section class="max-w-5xl mx-auto p-6 mt-20 bg-white bg-opacity-80 rounded-xl shadow-xl mb-10">
+
   <h2 class="fancy text-5xl text-center text-pink-800 mb-10">Skills and Tools</h2>
   <div class="grid md:grid-cols-2 gap-8">
 
-<!-- Grid besar untuk skills & tools -->
-<div class="grid md:grid-cols gap-8">
-  <!-- Hard & Soft Skills -->
-  <div class="border-4 border-pink-300 p-6 rounded-xl bg-white bg-opacity-70 shadow-md">
-    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-4">Hard Skills</h3>
-    <div class="flex flex-wrap justify-center gap-3 mb-6">
-      <span class="badge">analytical thinking</span>
-      <span class="badge">critical thinking</span>
-      <span class="badge">attention to detail</span>
-      <span class="badge">systematic thinking</span>
-    </div>
+    <div class="w-full md:w-1/2">
+      <h2 class="text-xl font-semibold mb-4 text-center">Software Skills</h2>
+      <div class="flex flex-wrap justify-center gap-6">
 
-    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-4">Soft Skills</h3>
-    <div class="flex flex-wrap justify-center gap-3">
-      <span class="badge">time management</span>
-      <span class="badge">team work</span>
-      <span class="badge">adaptability</span>
-      <span class="badge">communication</span>
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br bg-opacity-70 shadow-lg flex items-center justify-center">
+          <img src="vs_code-removebg-preview.png" alt="VS Code" class="w-12 h-12 object-contain">
+        </div>
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br bg-opacity-70 shadow-lg flex items-center justify-center">
+          <img src="figma logo.png" alt="Figma" class="w-12 h-12 object-contain">
+        </div>
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br bg-opacity-70 shadow-lg flex items-center justify-center">
+          <img src="canva.png" alt="Canva" class="w-12 h-12 object-contain">
+        </div>
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br bg-opacity-70 shadow-lg flex items-center justify-center">
+          <img src="arduino.png" alt="Arduino" class="w-12 h-12 object-contain">
+        </div>
+      </div>
     </div>
-  </div>
+    
 
-  <!-- Software Tools -->
-  <div class="border-4 border-pink-300 p-6 rounded-xl bg-white bg-opacity-70 shadow-md">
-    <h3 class="text-2xl font-semibold text-center text-pink-900 mb-6">Software Tools</h3>
-    <div class="flex flex-wrap justify-center gap-10">
-      <!-- Ps -->
-      <div class="relative w-24 h-24">
-        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
-        <span class="absolute inset-0 flex items-center justify-center font-bold text-blue-100 text-2xl">Ps</span>
-      </div>
-      <!-- Ai -->
-      <div class="relative w-24 h-24">
-        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
-        <span class="absolute inset-0 flex items-center justify-center font-bold text-yellow-300 text-2xl">Ai</span>
-      </div>
-      <!-- Id -->
-      <div class="relative w-24 h-24">
-        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
-        <span class="absolute inset-0 flex items-center justify-center font-bold text-rose-300 text-2xl">Id</span>
-      </div>
-      <!-- Lr -->
-      <div class="relative w-24 h-24">
-        <img src="img/star.png" alt="Star" class="absolute inset-0 w-full h-full object-contain">
-        <span class="absolute inset-0 flex items-center justify-center font-bold text-blue-300 text-2xl">Lr</span>
-      </div>
-    </div>
+<div>
+  <h2 class="text-xl font-semibold mb-2">Personal Skills</h2>
+  <div class="flex flex-wrap gap-2 text-sm">
+    <span class="badge">Teamwork</span>
+    <span class="badge">Time Management</span>
+    <span class="badge">Critical Thinking</span>
+    <span class="badge">Adaptability</span>
+    <span class="badge">Attention to Detail</span>
   </div>
+</div>
+
 </div>
 </section>
             <script>
